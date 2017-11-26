@@ -23,8 +23,10 @@
        }
        
        #map {
+           position: absolute;
+           
            height: 500px;
-           width: 100%;
+           width: 600px;
            border-color:brown;
            border-bottom-color:black;
            border-radius:90px 3px;
@@ -55,7 +57,7 @@ padding-bottom: 50px;
 background-color: deepskyblue;
 color: #D50000  ;
 position: absolute;
-top:1100px;
+top:1300px;
 left:0px;
 width: 1900px;
 } 
@@ -238,8 +240,8 @@ border-radius: 3px;
  alt="" class="topleft" style="width:350px;height:150px;position:absolute;top:35px;left:20px;">
      
       <div class="topleft"><h3>
- </h3></div> <img src="https://github.com/PromotionNL/I-Lanza/blob/gh-pages/img/i-lanza.holanda%23113BF27.jpg?raw=true"
- alt="Ocean" class="topleft" style="width:800px;height:375px;position:absolute;top:0px;left:400px;">
+ </h3></div> <img src="https://github.com/PromotionNL/I-Lanza/blob/master/img/Foto%20Portada%20Pagina%20Web%20PNG.png?raw=true"
+ alt="Ocean" class="topleft" style="width:900px;height:575px;position:absolute;top:-65px;left:330px;">
      
     
     
@@ -275,44 +277,52 @@ border-radius: 3px;
       
        <a href="http://i-lanza.ml/" class="w3-button w3-bar-item " ><br>HOME</a>
   <div class="w3-dropdown-hover"> 
-    <a href="Register-Login-employees.html" class="w3-button w3-bar-item " ><br>Employees</a>
+    <a href="Register-Login-employees.html" class="w3-button w3-bar-item " ><br>Empleados</a>
    
-     <a href="Register-Login-employers.html" class="w3-button w3-bar-item " ><br>Employers</a>
+     <a href="Register-Login-employers.html" class="w3-button w3-bar-item " ><br>Empleadores</a>
    
-    <a href="Vacatures.html" class="w3-button w3-bar-item " ><br>Vacancies</a>
+    <a href="Vacatures.html" class="w3-button w3-bar-item " ><br>Ofertas de Empleo</a>
    
-     <a href="Galerry.html" class="w3-button w3-bar-item " ><br>Gallery</a>
+     <a href="Galerry.html" class="w3-button w3-bar-item " ><br>Galeria</a>
 
-       <a href="About%20us.html" class="w3-button w3-bar-item " ><br>About us</a>
+       <a href="About%20us.html" class="w3-button w3-bar-item " ><br>Sobre Nosotros </a>
    
      <a href="Contact.html" class="w3-button w3-bar-item " >
 
-<br>Organization chart</a>
+<br>Organigrama</a>
    
-        <a href="Contact.html" class="w3-button w3-bar-item " ><br>Contact</a>
+        <a href="Contact.html" class="w3-button w3-bar-item " ><br>Contacto</a>
    
     
       </div>
     </div>
+    
+     
+ 
     
     
     
      <div class="w3-container" style="width:2200px;height:0px;position:absolute;top:490px;left:800px;">
  
  
-      <div id="map" style="position:absolute;top:100px;left:0px;"></div>
+     
     
    
       </div>
  
     </a>
-    
+ <div id="map" style="position:absolute;top:600px;left:550px;"></div>
      <script>
     function initMap(){
-        var location = {lat: -51.923950, lng: 4.535303};
-        var map = google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
+        var location = {lat: 51.923950, lng: 4.535303};
+        var map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
             center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+            
         });
     }
         
